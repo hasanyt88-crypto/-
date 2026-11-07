@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "نظام الزيارات الميدانية",
+    "slug": "hasco-pro",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon-no-text.png",
+    "scheme": "hasco-pro",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ea580c"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 3000
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "يحتاج التطبيق إلى موقعك لتسجيل موقع الزيارة الميدانية",
+        "NSCameraUsageDescription": "يحتاج التطبيق إلى الكاميرا لالتقاط صورة العميل",
+        "NSPhotoLibraryUsageDescription": "يحتاج التطبيق إلى معرض الصور لاختيار صورة"
+      }
+    },
+    "android": {
+      "package": "com.hasco.hetarpro",
+      "versionCode": 6,
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "monochromeImage": "./assets/images/adaptive-icon-mono.png",
+        "backgroundColor": "#F0F4FA"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "يحتاج HETAR Pro إلى موقعك لتسجيل موقع الزيارة"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "يحتاج HETAR Pro إلى الوصول للصور",
+          "cameraPermission": "يحتاج HETAR Pro إلى الكاميرا"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "04629443-f3d9-48d5-9363-6ea73b2b933b"
+      }
+    },
+    "owner": "hetary"
+  }
+}
