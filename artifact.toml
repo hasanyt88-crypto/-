@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "HASCO Pro - زيارات ميدانية"
+description = "تطبيق إدارة الزيارات الميدانية لشركة HASCO. يتيح لمندوبي المبيعات تسجيل الزيارات مع الصور والموقع الجغرافي والتوقيع وبيانات المنتجات، وإرسال الطلبات عبر واتساب، مع لوحة تحكم للمشرفين والأدمن. يدعم التحديثات التلقائية OTA."
+version = "1.0.0"
+id = "artifacts/hasco-pro"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 21645
+
+[services.development]
+run = "pnpm --filter @workspace/hasco-pro run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/hasco-pro", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/hasco-pro", "run", "serve" ]
+
+[services.env]
+PORT = "21645"
+BASE_PATH = "/"
